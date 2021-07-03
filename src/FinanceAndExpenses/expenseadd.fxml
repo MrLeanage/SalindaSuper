@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FinanceAndExpenses.ExpenseviewController">
+ 
+   <children>
+      <AnchorPane layoutY="209.0" prefHeight="93.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="388.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="222.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Extra Expenses-Add Expenses" textAlignment="CENTER" wrappingWidth="369.13671875" AnchorPane.leftAnchor="222.0" AnchorPane.topAnchor="23.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="62.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Title" wrappingWidth="89.07471895217896">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="58.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Date" wrappingWidth="96.1015625">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Button fx:id="addbtn" layoutX="278.0" layoutY="330.0" mnemonicParsing="false" onAction="#addDataFromDatabase" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 2; -fx-border-radius: 10;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button fx:id="CancelBtn" layoutX="424.0" layoutY="330.0" mnemonicParsing="false" onAction="#goViewExpense" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 2; -fx-border-radius: 10;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="19.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="62.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount" wrappingWidth="89.07470703125">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="57.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            <TextField fx:id="AddAmountBtn" layoutX="276.0" layoutY="222.0" prefHeight="25.0" prefWidth="248.0" promptText="Enter the Amount" />
+            <TextArea fx:id="AddescriptionBtn" layoutX="281.0" layoutY="274.0" prefHeight="47.0" prefWidth="248.0" promptText=" Add a Description" />
+            <DatePicker fx:id="AddDateBtn" layoutX="278.0" layoutY="177.0" prefHeight="25.0" prefWidth="248.0" promptText="Choose Date" />
+            <TextField fx:id="Entertitleexpenses" layoutX="276.0" layoutY="127.0" prefHeight="25.0" prefWidth="248.0" promptText="Enter the Title" />
+            <Label fx:id="titleLabel" layoutX="306.0" layoutY="154.0" prefHeight="17.0" prefWidth="188.0" />
+            <Label fx:id="dataLabel" layoutX="308.0" layoutY="204.0" prefHeight="17.0" prefWidth="188.0" />
+            <Label fx:id="amountLabel" layoutX="306.0" layoutY="249.0" prefHeight="17.0" prefWidth="188.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goUpdateExpense" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Update Expenses" textFill="WHITE" AnchorPane.rightAnchor="187.0" AnchorPane.topAnchor="69.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#goBack" prefHeight="27.0" prefWidth="144.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Finance &amp; Expences" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="16" />
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goDeleteExpense" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Delete Expenses" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="69.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goViewExpense" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="View Expenses" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="69.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goAddExpense" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Add Expenses" textFill="WHITE" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="69.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Customer.CustomerAddController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="rootpane" layoutX="-5.0" layoutY="1.0" prefHeight="400.0" prefWidth="700.0" styleClass="mainFxmlClass" AnchorPane.bottomAnchor="199.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="288.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="2.0" width="668.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="99.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="386.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="274.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add New Customer" AnchorPane.leftAnchor="274.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="378.0" layoutY="326.0" mnemonicParsing="false" onAction="#AddCustomer" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 1;" text="Add" textFill="WHITE" AnchorPane.topAnchor="326.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="29.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name :" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="168.05078125" />
+            <Text fill="WHITE" layoutX="374.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number     :" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="165.0" />
+            <Text fill="WHITE" layoutX="377.0" layoutY="193.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address       :" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="239.0" />
+            <Text fill="WHITE" layoutX="29.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address  :" AnchorPane.leftAnchor="29.0" AnchorPane.topAnchor="218.0" />
+            <Text fill="WHITE" layoutX="374.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration Date  :" AnchorPane.leftAnchor="390.0" AnchorPane.topAnchor="285.0" />
+            <TextField fx:id="Fname" layoutX="85.0" layoutY="165.0" prefHeight="25.0" prefWidth="135.0" promptText="First Name" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="165.0" />
+            <TextField fx:id="CAddress1" layoutX="86.0" layoutY="215.0" prefHeight="25.0" prefWidth="135.0" promptText="Address 1" AnchorPane.leftAnchor="95.0" AnchorPane.rightAnchor="470.0" AnchorPane.topAnchor="215.0" />
+            <TextField fx:id="CEmail" layoutX="494.0" layoutY="228.0" prefHeight="25.0" prefWidth="174.0" promptText="example@gmail.lk" AnchorPane.leftAnchor="494.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="239.0" />
+            <TextField fx:id="CPhone1" layoutX="494.0" layoutY="165.0" prefHeight="25.0" prefWidth="174.0" promptText="000 - 000 0000" AnchorPane.leftAnchor="494.0" AnchorPane.topAnchor="165.0" />
+            <Button layoutX="273.0" layoutY="326.0" mnemonicParsing="false" onAction="#goCustomerView" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 1;" text="Cancel" textFill="WHITE" AnchorPane.leftAnchor="252.0" AnchorPane.topAnchor="326.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TextField fx:id="Lname" layoutX="227.0" layoutY="168.0" prefHeight="25.0" prefWidth="135.0" promptText="Last Name" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="165.0" />
+            <TextField fx:id="CC" layoutX="86.0" layoutY="263.0" prefHeight="25.0" prefWidth="135.0" promptText="City" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="263.0" />
+            <TextField fx:id="CProvi" layoutX="228.0" layoutY="263.0" prefHeight="25.0" prefWidth="135.0" promptText="Province" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="263.0" />
+            <TextField fx:id="CAddress2" layoutX="228.0" layoutY="215.0" prefHeight="25.0" prefWidth="135.0" promptText="Address 2" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="215.0" />
+            <DatePicker fx:id="CRegDate" layoutX="487.0" layoutY="239.0" AnchorPane.leftAnchor="494.0" AnchorPane.topAnchor="285.0" />
+            <Label fx:id="CAddLabelFName" layoutX="95.0" layoutY="194.0" prefHeight="17.0" prefWidth="135.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelLName" layoutX="240.0" layoutY="194.0" prefHeight="17.0" prefWidth="135.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelAddress1" layoutX="95.0" layoutY="243.0" prefHeight="17.0" prefWidth="135.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelAddress2" layoutX="240.0" layoutY="243.0" prefHeight="17.0" prefWidth="135.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelRegDate" layoutX="494.0" layoutY="312.0" prefHeight="17.0" prefWidth="174.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelCity" layoutX="95.0" layoutY="295.0" prefHeight="17.0" prefWidth="135.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelProvince" layoutX="240.0" layoutY="295.0" prefHeight="17.0" prefWidth="135.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelPhone" layoutX="494.0" layoutY="194.0" prefHeight="17.0" prefWidth="174.0" textFill="#f2ff00" />
+            <Label fx:id="CAddLabelEmail" layoutX="494.0" layoutY="267.0" prefHeight="17.0" prefWidth="174.0" textFill="#f2ff00" AnchorPane.topAnchor="267.0" />
+            <TextField fx:id="CPh" layoutX="500.0" layoutY="206.0" prefHeight="25.0" prefWidth="165.0" promptText="000-000 0000" AnchorPane.topAnchor="211.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goCustomerHome" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Back to Customer Home" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="538.0" AnchorPane.topAnchor="15.0" />
+                  <Button mnemonicParsing="false" onAction="#goCustomerView" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="View Customer" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goCustomerAdd" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Add Customer" textFill="WHITE" AnchorPane.rightAnchor="358.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goCustomerUpdate" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Update  Customer" textFill="WHITE" AnchorPane.rightAnchor="189.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goCustomerDelete" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Delete  Customer" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+<!--           <Button layoutX="41.0" layoutY="353.0" mnemonicParsing="false" onAction="loadDataFromDB" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5; -fx-border-width: 1;" text="Load Customer Details" textFill="WHITE" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="355.0" />-->
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

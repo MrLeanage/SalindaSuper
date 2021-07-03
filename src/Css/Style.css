@@ -1,0 +1,6 @@
+.error{
+    
+    -fx-background-color: red,linear-gradient(to bottom,derive(black,10%),derive(red,5%));
+    
+}
+

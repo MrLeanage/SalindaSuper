@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="04e87179-fad8-46fe-9ab6-8b74749dabf2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM employee]]>
+	</queryString>
+	<field name="ENo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ENIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EAddress" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EDateOfBirth" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EBankNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EBankName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EType" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EPhoneNo1" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Epassword" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EEmail" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Euser" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="59" width="50" height="20" uuid="b3c22fc0-4025-4156-a777-068b3b0f6000"/>
+				<text><![CDATA[ENo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="59" width="43" height="20" uuid="330968a7-f623-4c97-80e6-0e64120bc015"/>
+				<text><![CDATA[ENIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="59" width="45" height="20" uuid="746f3a2b-4ffc-4130-be2f-22f5ade23716"/>
+				<text><![CDATA[EName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="138" y="59" width="78" height="20" uuid="3982325b-f1d9-4913-b24a-565f98ce1c06"/>
+				<text><![CDATA[EAddress]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="59" width="88" height="20" uuid="b084eb5e-41e0-4740-be37-48f4fd4620ed"/>
+				<text><![CDATA[EDateOfBirth]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="59" width="77" height="20" uuid="6f33fe35-c081-4c07-971a-2dfe7462ede5"/>
+				<text><![CDATA[EBankNo]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="381" y="59" width="83" height="20" uuid="001fe43d-ec61-431e-8548-1d582b0a0e29"/>
+				<textFieldExpression><![CDATA[$F{EBankName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="464" y="59" width="83" height="20" uuid="21a5daae-43e9-408d-8ed0-474c93ff4ba7"/>
+				<text><![CDATA[EType]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="13" width="156" height="20" uuid="d4df8a9b-e804-4186-9aa5-2cdefb0c6e10"/>
+				<textElement>
+					<font fontName="AR JULIAN" size="14" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Employee Details ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="59" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="5ff4ecbc-9384-4eb8-a88f-f996d2861b04"/>
+				<textFieldExpression><![CDATA[$F{ENo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="43" height="20" uuid="25beb364-302d-4cbb-9a38-fb3b41ced476"/>
+				<textFieldExpression><![CDATA[$F{ENIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="0" width="62" height="20" uuid="9e9ca026-0df7-471f-8771-4e4ab50dd2ff"/>
+				<textFieldExpression><![CDATA[$F{EName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="77" height="20" uuid="cd53e3da-f849-4809-b0e3-7d000a666aa5"/>
+				<textFieldExpression><![CDATA[$F{EAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="232" y="0" width="72" height="20" uuid="555823be-e7ca-4a45-8b22-b4d4f3f40de7"/>
+				<textFieldExpression><![CDATA[$F{EDateOfBirth}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="304" y="0" width="77" height="20" uuid="6be5e583-5345-47d0-925b-6fc8a28dffee"/>
+				<textFieldExpression><![CDATA[$F{EBankNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="464" y="0" width="83" height="20" uuid="c6ad5e34-50ad-41bf-b037-6e5976693353"/>
+				<textFieldExpression><![CDATA[$F{EType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="381" y="0" width="83" height="20" uuid="06586307-5199-49fb-b551-5d50dac5ec1c"/>
+				<textFieldExpression><![CDATA[$F{EBankName}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Supplier.SupplierdeleteController">
+   <children>
+      <AnchorPane layoutX="24.0" layoutY="29.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="288.0" layoutX="16.0" layoutY="99.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="2.0" width="668.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="386.0" layoutX="6.0" layoutY="9.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="261.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Supplier" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="261.0" AnchorPane.rightAnchor="259.1640625" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="235.0" layoutY="326.0" mnemonicParsing="false" onAction="#goSupplierView" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 1;" text="Cancel" textFill="WHITE" AnchorPane.topAnchor="326.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="345.0" layoutY="326.0" mnemonicParsing="false" onAction="#deleteDataFromDatabase" onMouseClicked="#getID" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 1;" text="Delete Supplier" textFill="WHITE" AnchorPane.leftAnchor="345.0" AnchorPane.topAnchor="326.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <TableView fx:id="DelSTable" layoutX="36.0" layoutY="176.0" onMouseClicked="#getID" prefHeight="135.0" prefWidth="624.0" AnchorPane.leftAnchor="36.0">
+               <columns>
+                  <TableColumn fx:id="SIDColumn" prefWidth="74.0" text="SID" />
+                  <TableColumn fx:id="SNameColumn" prefWidth="163.0" text="Supplier Name" />
+                  <TableColumn fx:id="SPhone1Column" prefWidth="172.0" text="Phone Number" />
+                  <TableColumn minWidth="0.0" prefWidth="0.0" />
+                  <TableColumn fx:id="SEmailColumn" prefWidth="214.0" text="Email" />
+               </columns>
+            </TableView>
+            <Button layoutX="36.0" layoutY="118.0" mnemonicParsing="false" onAction="#loadDataFromDB" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Load Supplier Details" textFill="WHITE" />
+            <AnchorPane prefHeight="200.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goSupplierHome" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Back to Supplier Home" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="538.0" AnchorPane.topAnchor="15.0" />
+                  <Button mnemonicParsing="false" onAction="#goSupplierView" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="View Supplier" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goSupplierAdd" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Add Supplier" textFill="WHITE" AnchorPane.rightAnchor="358.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goSupplierUpdate" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Update Supplier" textFill="WHITE" AnchorPane.rightAnchor="189.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goSupplierDelete" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Delete Supplier" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

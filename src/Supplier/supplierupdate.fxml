@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Supplier.SupplierupdateController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="288.0" layoutX="16.0" layoutY="99.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="2.0" width="668.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="99.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="386.0" layoutX="6.0" layoutY="9.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <AnchorPane prefHeight="200.0" prefWidth="700.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#goSupplierHome" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Back to Supplier Home" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="538.0" AnchorPane.topAnchor="15.0" />
+                  <Button mnemonicParsing="false" onAction="#goSupplierView" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="View Supplier" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goSupplierAdd" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Add Supplier" textFill="WHITE" AnchorPane.rightAnchor="358.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goSupplierUpdate" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Update Supplier" textFill="WHITE" AnchorPane.rightAnchor="189.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goSupplierDelete" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Delete Supplier" textFill="WHITE" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="45.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="255.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Suppliers" wrappingWidth="212.546875" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="255.0" AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="14.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="387.0" layoutY="271.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address :" AnchorPane.leftAnchor="387.0" AnchorPane.topAnchor="258.05078125" />
+            <Text fill="WHITE" layoutX="25.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Full Name  :" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="239.05078125" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address  :" AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="296.0" />
+            <Text fill="WHITE" layoutX="393.0" layoutY="315.94921875" strokeType="OUTSIDE" strokeWidth="0.0" text="Expire Date  :" AnchorPane.leftAnchor="393.0" AnchorPane.topAnchor="303.0" />
+            <TextField fx:id="SEmail" layoutX="477.0" layoutY="258.0" prefHeight="25.0" prefWidth="189.0" promptText="example@gmail.lk" AnchorPane.leftAnchor="477.0" AnchorPane.topAnchor="258.0" />
+            <TextField fx:id="SAddress1" layoutX="91.0" layoutY="289.0" prefHeight="25.0" prefWidth="136.0" promptText="Address 1" AnchorPane.leftAnchor="91.0" AnchorPane.topAnchor="289.0" />
+            <DatePicker fx:id="SRegDate" layoutX="476.0" layoutY="302.0" prefHeight="25.0" prefWidth="174.0" AnchorPane.leftAnchor="476.0" AnchorPane.topAnchor="302.0" />
+            <Button layoutX="452.0" layoutY="345.0" mnemonicParsing="false" onAction="#goSupplierView" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 1;" text="Cancel" textFill="WHITE" AnchorPane.leftAnchor="452.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="345.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="537.0" layoutY="345.0" mnemonicParsing="false" onAction="#UpdateProductsToDatabase" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 1;" text="Update Product" textFill="WHITE" AnchorPane.leftAnchor="537.0" AnchorPane.topAnchor="345.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Text fill="WHITE" layoutX="373.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Number  :" AnchorPane.leftAnchor="373.0" />
+            <TextField fx:id="SPhone1" layoutX="477.0" layoutY="216.0" prefHeight="25.0" prefWidth="97.0" promptText="000 - 000 0000" />
+            <TextField fx:id="Fname" layoutX="95.0" layoutY="238.0" prefHeight="25.0" prefWidth="130.0" promptText="First Name" />
+            <TextField fx:id="Lname" layoutX="231.0" layoutY="238.0" prefHeight="25.0" prefWidth="136.0" promptText="Last Name" />
+            <TextField fx:id="SCity" layoutX="91.0" layoutY="336.0" prefHeight="25.0" prefWidth="136.0" promptText="Ciity" />
+            <TextField fx:id="SProvince" layoutX="235.0" layoutY="337.0" prefHeight="25.0" prefWidth="136.0" promptText="Province" />
+            <TextField fx:id="SAddress2" layoutX="235.0" layoutY="289.0" prefHeight="25.0" prefWidth="136.0" promptText="Address 2" />
+            <TextField fx:id="SPhone2" layoutX="581.0" layoutY="216.0" prefHeight="25.0" prefWidth="97.0" promptText="000 - 000 0000" />
+            <TextField fx:id="searchBox" layoutX="95.0" layoutY="102.0" prefHeight="1.0" prefWidth="189.0" />
+            <Text fill="WHITE" layoutX="45.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Serach  :" />
+            <TableView fx:id="SupplyViewTable" layoutX="38.0" layoutY="130.0" onMouseClicked="#loadSelectdDatafromDatabase" prefHeight="82.0" prefWidth="626.0">
+               <columns>
+                  <TableColumn fx:id="SIDColumn" prefWidth="74.0" text="SID" />
+                  <TableColumn fx:id="SNameColumn" prefWidth="163.0" text="Supplier Name" />
+                  <TableColumn fx:id="SPhone1Column" prefWidth="172.0" text="Phone Number" />
+                  <TableColumn minWidth="0.0" prefWidth="0.0" />
+                  <TableColumn fx:id="SEmailColumn" prefWidth="214.0" text="Email" />
+               </columns>
+            </TableView>
+            <Label fx:id="SNameLabel" layoutX="110.0" layoutY="263.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SLastNameLabel" layoutX="254.0" layoutY="266.0" prefHeight="17.0" prefWidth="90.0" textFill="#e1ff00" />
+            <Label fx:id="SAddress1Lable" layoutX="100.0" layoutY="314.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SAddress2Lable" layoutX="254.0" layoutY="315.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SCityLable" layoutX="110.0" layoutY="365.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SProvinceLable" layoutX="252.0" layoutY="363.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SPhone1Lable" layoutX="479.0" layoutY="240.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SPhone2Lable" layoutX="585.0" layoutY="241.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Label fx:id="SEmailLable" layoutX="523.0" layoutY="284.0" prefHeight="17.0" prefWidth="90.0" textFill="#eeff00" />
+            <Button layoutX="523.0" layoutY="102.0" mnemonicParsing="false" onAction="#loadDatafromDB" prefHeight="27.0" prefWidth="140.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Load Supplier Details" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

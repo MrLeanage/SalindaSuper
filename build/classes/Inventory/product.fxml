@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory.ProductController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="3.0" layoutY="9.0" prefHeight="400.0" prefWidth="691.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="288.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="2.0" width="668.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="99.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="386.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Product-Items " AnchorPane.leftAnchor="264.0" AnchorPane.rightAnchor="264.2265625" AnchorPane.topAnchor="15.2890625">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="ViewProductTable" layoutX="31.0" layoutY="174.0" prefHeight="199.0" prefWidth="639.0" AnchorPane.rightAnchor="30.0">
+               <columns>
+                  <TableColumn fx:id="PIDColumn" prefWidth="27.0" text="ID" />
+                  <TableColumn fx:id="PNameColumn" prefWidth="191.6666259765625" text="Name" />
+                  <TableColumn fx:id="PUnitsBlocksColumn" prefWidth="78.0" text="Units/Blocks" />
+                  <TableColumn fx:id="PWeightColumn" prefWidth="60.66668701171875" text="Weight-1" />
+                  <TableColumn fx:id="PBPriceColumn" prefWidth="66.0" text="BPrice" />
+                  <TableColumn fx:id="PMPriceColumn" prefWidth="67.0" text="MPrice" />
+                  <TableColumn fx:id="PMDateColumn" minWidth="0.0" prefWidth="73.33331298828125" text="MDate" />
+                  <TableColumn fx:id="PExpDateColumn" prefWidth="74.33331298828125" text="ExpDate" />
+               </columns>
+            </TableView>
+            <Button fx:id="btnLoad" layoutX="31.0" layoutY="122.0" mnemonicParsing="false" onAction="#loadDatafromDatabase" prefHeight="25.0" prefWidth="87.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5; -fx-border-width: 1;" text="Load Data" textFill="WHITE" AnchorPane.leftAnchor="31.0" AnchorPane.topAnchor="122.0">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <TextField fx:id="pBrandTextBoxSearch" layoutX="134.0" layoutY="125.0" prefHeight="25.0" prefWidth="455.0" promptText="Search in Here" />
+            <Button layoutX="587.0" layoutY="121.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Search" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+               </graphic>
+            </Button>
+            <AnchorPane prefHeight="200.0" prefWidth="700.0" />
+            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#loadInventoryHome" prefHeight="21.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="   Inventory" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="16" />
+               </graphic>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#loadview" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="View Products" textFill="WHITE" AnchorPane.leftAnchor="16.0" AnchorPane.topAnchor="45.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#loadadd" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Add Products" textFill="WHITE" AnchorPane.leftAnchor="187.0" AnchorPane.topAnchor="45.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#loadupdate" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Update Products" textFill="WHITE" AnchorPane.leftAnchor="358.0" AnchorPane.topAnchor="45.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#loaddelete" prefHeight="46.0" prefWidth="155.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec;" text="Delete Products" textFill="WHITE" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="45.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

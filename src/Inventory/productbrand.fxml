@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Inventory.ProductBrandController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutX="3.0" layoutY="9.0" prefHeight="400.0" prefWidth="691.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="269.0" layoutX="377.0" layoutY="109.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="2.0" width="298.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="288.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="2.0" width="668.0" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="99.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="386.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="232.0" layoutY="37.7109375" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Brands " wrappingWidth="233.9957275390625" AnchorPane.leftAnchor="232.0" AnchorPane.rightAnchor="237.0" AnchorPane.topAnchor="15.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="ViewProductBrandTable" layoutX="31.0" layoutY="113.0" onMouseClicked="#getID" onMousePressed="#loadSelectdDatafromDatabase" prefHeight="260.0" prefWidth="338.0">
+               <columns>
+                  <TableColumn fx:id="PBrandIDColumn" prefWidth="27.0" text="ID" />
+                  <TableColumn fx:id="PBrandNameColumn" prefWidth="112.0" text="Brand Name" />
+                  <TableColumn fx:id="PBrandDescriptionColumn" prefWidth="205.0" text="Brand Description" />
+               </columns>
+            </TableView>
+            <Button layoutX="382.0" layoutY="124.0" mnemonicParsing="false" onAction="#loadDatafromDatabase" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5; -fx-border-width: 1;" text="Load Data" textFill="WHITE" AnchorPane.leftAnchor="385.0" AnchorPane.topAnchor="117.0">
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Label layoutX="390.0" layoutY="144.0" prefHeight="17.0" prefWidth="123.0" text="Brand Name          :" textFill="WHITE" AnchorPane.topAnchor="155.0" />
+            <Label layoutX="391.0" layoutY="202.0" prefHeight="17.0" prefWidth="123.0" text="Brand Description   :" textFill="WHITE" AnchorPane.topAnchor="200.0" />
+            <TextField fx:id="pBrandTextBoxName" layoutX="513.0" layoutY="140.0" onMouseClicked="#clearName" AnchorPane.topAnchor="155.0" />
+            <Button layoutX="447.0" layoutY="244.0" mnemonicParsing="false" onAction="#AddBrandToDatabase" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5; -fx-border-width: 1;" text="Add Brand" textFill="WHITE" AnchorPane.topAnchor="250.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="447.0" layoutY="288.0" mnemonicParsing="false" onAction="#UpdateBrandToDatabase" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5; -fx-border-width: 1;" text="Update Brand" textFill="WHITE" AnchorPane.topAnchor="290.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="447.0" layoutY="331.0" mnemonicParsing="false" onAction="#deleteDataFromDatabase" prefHeight="31.0" prefWidth="149.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5; -fx-border-width: 1;" text="Delete Brand" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Text fill="#f2ff00" fontSmoothingType="LCD" layoutX="143.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add/Update/Delete Your  Pre Defined Brand Details in Here..." wrappingWidth="425.1067581176758">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Text>
+            <TextField fx:id="pBrandTextBoxSearch" layoutX="35.0" layoutY="70.0" prefHeight="25.0" prefWidth="334.0" promptText="Search Your in Brand Here" />
+            <Label fx:id="pBrandLabelName" layoutX="391.0" layoutY="172.0" prefHeight="17.0" prefWidth="112.0" textFill="#f2ff00" />
+            <Label fx:id="pBrandLabelDescription" layoutX="391.0" layoutY="217.0" prefHeight="17.0" prefWidth="112.0" textFill="#f2ff00" />
+            <TextArea fx:id="pBrandTextBoxDescription" layoutX="513.0" layoutY="188.0" onMouseClicked="#clearDescription" prefHeight="53.0" prefWidth="149.0" />
+            <Button layoutX="369.0" layoutY="66.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="83.0" style="-fx-background-color: transparent;" text="Search" textFill="WHITE" AnchorPane.leftAnchor="369.0" AnchorPane.topAnchor="66.0">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="20" />
+               </graphic>
+            </Button>
+            <Button alignment="BOTTOM_LEFT" mnemonicParsing="false" onAction="#loadInventoryHome" prefHeight="21.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="   Inventory" textFill="WHITE" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="555.0" AnchorPane.topAnchor="15.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="16" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

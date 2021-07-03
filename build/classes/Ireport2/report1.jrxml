@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8eb3999-48e0-4613-b7ea-27d40a565dc8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM offerscheme]]>
+	</queryString>
+	<field name="OSID" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OSName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OSDescription" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OSRate" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OSStartDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="OSEndDate" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="132" y="0" width="267" height="36" uuid="f980c2a9-28b7-463b-a5e1-564ca1bacffb"/>
+				<textElement>
+					<font fontName="AR JULIAN" size="24" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Offer Management ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="67" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="-54" width="92" height="20" uuid="ca24ceb3-1363-4677-a18d-a56a57f1feef"/>
+				<text><![CDATA[OSID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="-54" width="92" height="20" uuid="e9d1ef1f-76c4-42b0-aefb-8e5a11c3edb2"/>
+				<text><![CDATA[OSDescription]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="-54" width="92" height="20" uuid="6c8b55af-d8fc-4576-a241-7a8152a778a7"/>
+				<text><![CDATA[OSName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="276" y="-54" width="92" height="20" uuid="a14b1b44-7b23-43ae-9f5a-4b588ec66359"/>
+				<text><![CDATA[OSRate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="-54" width="92" height="20" uuid="ca921b93-b98c-40e8-a328-6d916f691b18"/>
+				<text><![CDATA[OSStartDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="-54" width="92" height="20" uuid="a3b730fa-84ea-43e9-bb0a-080a775b728f"/>
+				<text><![CDATA[OSEndDate]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="-54" width="92" height="20" uuid="9ec4ad13-8619-48ea-bb28-221677701516"/>
+				<textFieldExpression><![CDATA[$F{OSID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="92" y="-54" width="92" height="20" uuid="f6ecee9e-4fdb-4fdb-9c67-dae6ec4b9d9c"/>
+				<textFieldExpression><![CDATA[$F{OSDescription}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="-54" width="92" height="20" uuid="2db152e0-fb86-4897-bb0e-846868cf41fd"/>
+				<textFieldExpression><![CDATA[$F{OSName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="276" y="-54" width="92" height="20" uuid="5b746aeb-d6d3-493b-847b-8fc1c373bef4"/>
+				<textFieldExpression><![CDATA[$F{OSRate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="-54" width="92" height="20" uuid="6e57f803-9641-4951-9a09-220f17ef51b1"/>
+				<textFieldExpression><![CDATA[$F{OSStartDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="-54" width="92" height="20" uuid="ddf6404f-c7dc-4baa-918a-8865b5ee0250"/>
+				<textFieldExpression><![CDATA[$F{OSEndDate}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

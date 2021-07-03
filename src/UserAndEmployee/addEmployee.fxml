@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane id="AnchorPane" layoutX="10.0" layoutY="-3.0" prefHeight="400.0" prefWidth="700.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2197ff00" height="388.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <Label layoutX="26.0" layoutY="196.0" text="Name :" textFill="WHITE" AnchorPane.leftAnchor="26.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="227.0" text="Address :" textFill="WHITE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="227.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="268.0" text="Date of Birth :" textFill="WHITE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="268.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="455.0" layoutY="309.0" prefHeight="19.0" prefWidth="104.0" text="Employee Type :" textFill="WHITE" AnchorPane.leftAnchor="455.0" AnchorPane.topAnchor="309.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="235.0" layoutY="194.0" text="Phone No :" textFill="WHITE" AnchorPane.leftAnchor="235.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="455.0" layoutY="193.0" text="Bank Name :" textFill="WHITE" AnchorPane.leftAnchor="455.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="235.0" layoutY="227.0" text="E-mail :" textFill="WHITE" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="227.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="309.0" text="NIC :" textFill="WHITE" AnchorPane.leftAnchor="26.0" AnchorPane.topAnchor="309.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="455.0" layoutY="227.0" text="Bank Acc No :" textFill="WHITE" AnchorPane.leftAnchor="455.0" AnchorPane.topAnchor="227.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="455.0" layoutY="268.0" prefHeight="19.0" prefWidth="86.0" text="Employee Id :" textFill="WHITE" AnchorPane.leftAnchor="455.0" AnchorPane.topAnchor="268.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="235.0" layoutY="268.0" text="User Name :" textFill="WHITE" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="268.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="235.0" layoutY="309.0" text="Password :" textFill="WHITE" AnchorPane.leftAnchor="235.0" AnchorPane.topAnchor="309.0">
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="220.0" layoutY="21.0" text="Employee Details" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <TextField fx:id="Ename" layoutX="95.0" layoutY="187.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="95.0" />
+            <TextField fx:id="Eaddress" layoutX="95.0" layoutY="227.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="227.0" />
+            <TextField fx:id="Ebirth" layoutX="95.0" layoutY="268.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="268.0" />
+            <TextField fx:id="Enic" layoutX="95.0" layoutY="309.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="309.0" />
+            <TextField fx:id="Ephn" layoutX="315.0" layoutY="186.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="315.0" />
+            <TextField fx:id="Euser" layoutX="315.0" layoutY="268.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="268.0" />
+            <TextField fx:id="EbankName" layoutX="536.0" layoutY="186.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="536.0" />
+            <TextField fx:id="Eacc" layoutX="536.0" layoutY="227.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="536.0" AnchorPane.topAnchor="227.0" />
+            <TextField fx:id="Eid" layoutX="536.0" layoutY="268.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="536.0" AnchorPane.topAnchor="268.0" />
+            <TextField fx:id="Etype" layoutX="536.0" layoutY="309.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="536.0" AnchorPane.topAnchor="309.0" />
+            <TextField fx:id="Eemail" layoutX="315.0" layoutY="227.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="227.0" />
+            <PasswordField fx:id="epass" layoutX="315.0" layoutY="309.0" prefHeight="24.0" prefWidth="130.0" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="309.0" />
+            <Button fx:id="submit" layoutX="83.0" layoutY="352.0" mnemonicParsing="false" onAction="#handleEmployee" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5;" text="Submit" textFill="WHITE" AnchorPane.leftAnchor="83.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <TableView fx:id="EmployeeTable" layoutX="25.0" layoutY="70.0" onMouseClicked="#showclick" prefHeight="98.0" prefWidth="655.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="20.0">
+               <columns>
+                  <TableColumn fx:id="Tid" prefWidth="25.0" text="EID" />
+                  <TableColumn fx:id="Tnic" prefWidth="48.666656494140625" text="NIC" />
+                  <TableColumn fx:id="Tname" prefWidth="80.6666259765625" text="Name" />
+                  <TableColumn fx:id="Taddress" prefWidth="65.33331298828125" text="Address" />
+                  <TableColumn fx:id="TDOB" prefWidth="37.0" text="DOB" />
+                  <TableColumn fx:id="Tbankno" prefWidth="62.33331298828125" text="BankNo" />
+                  <TableColumn fx:id="Tbankname" prefWidth="70.6666259765625" text="BankName" />
+                  <TableColumn fx:id="Temptype" prefWidth="54.0" text="Emptype" />
+                  <TableColumn fx:id="Tpno" prefWidth="58.33331298828125" text="PhoneNo" />
+                  <TableColumn fx:id="Tpassword" prefWidth="35.6666259765625" text="PW" />
+                  <TableColumn fx:id="Temail" prefWidth="49.0" text="Email" />
+                  <TableColumn fx:id="Tusername" prefWidth="64.0" text="UserName" />
+               </columns>
+            </TableView>
+            <Button fx:id="edit" layoutX="303.0" layoutY="352.0" mnemonicParsing="false" onAction="#UpdateEmployee" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5;" text="Edit" textFill="WHITE" AnchorPane.leftAnchor="303.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="submit2" layoutX="523.0" layoutY="352.0" mnemonicParsing="false" onAction="#Deleting" prefHeight="30.0" prefWidth="132.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 5;" text="Delete" textFill="WHITE" AnchorPane.leftAnchor="523.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="validName" layoutX="95.0" layoutY="210.0" prefHeight="0.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="210.0" />
+            <Label fx:id="validAddress" layoutX="95.0" layoutY="251.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="251.0" />
+            <Label fx:id="validDOB" layoutX="95.0" layoutY="292.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="292.0" />
+            <Label fx:id="validNIC" layoutX="95.0" layoutY="333.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="95.0" AnchorPane.topAnchor="333.0" />
+            <Label fx:id="validPhn" layoutX="315.0" layoutY="210.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="210.0" />
+            <Label fx:id="validEmail" layoutX="315.0" layoutY="251.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="251.0" />
+            <Label fx:id="validUsername" layoutX="315.0" layoutY="292.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="292.0" />
+            <Label fx:id="validPassword" layoutX="315.0" layoutY="333.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="315.0" AnchorPane.topAnchor="333.0" />
+            <Label fx:id="validBankname" layoutX="536.0" layoutY="210.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="536.0" AnchorPane.topAnchor="210.0" />
+            <Label fx:id="validAcc" layoutX="536.0" layoutY="251.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="536.0" AnchorPane.topAnchor="251.0" />
+            <Label fx:id="validID" layoutX="536.0" layoutY="292.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="536.0" AnchorPane.topAnchor="292.0" />
+            <Label fx:id="validType" layoutX="555.0" layoutY="333.0" prefHeight="17.0" prefWidth="130.0" textFill="#a41b1b" AnchorPane.leftAnchor="555.0" AnchorPane.topAnchor="333.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

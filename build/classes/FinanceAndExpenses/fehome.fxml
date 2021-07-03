@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FinanceAndExpenses.FehomeController">
+   <children>
+      <AnchorPane fx:id="rootpane" layoutY="209.0" prefHeight="93.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="388.0" layoutX="6.0" layoutY="-19.0" stroke="#0290ec" strokeType="INSIDE" strokeWidth="4.0" width="688.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="6.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="9.0" />
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="12.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Extra Expenses And Finance Managment" textAlignment="CENTER" wrappingWidth="675.13671875" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="28.0" />
+               </font>
+            </Text>
+            <Button layoutX="150.0" layoutY="139.0" mnemonicParsing="false" onAction="#goExpense" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 2;" text="Extra Expenses" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="150.0" layoutY="246.0" mnemonicParsing="false" onAction="#goProfit" prefHeight="60.0" prefWidth="400.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-radius: 10; -fx-border-width: 2;" text="Finance Managerment" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button alignment="BOTTOM_LEFT" layoutX="27.0" layoutY="14.0" mnemonicParsing="false" onAction="#loadAdminHome" prefHeight="21.0" prefWidth="123.0" style="-fx-background-color: transparent; -fx-border-color: #0290ec; -fx-border-width: 1; -fx-border-radius: 5;" text="Admin  Home" textFill="WHITE" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_CIRCLE_LEFT" size="16" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
